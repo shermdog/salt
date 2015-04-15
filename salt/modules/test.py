@@ -53,8 +53,8 @@ def ping():
         salt '*' test.ping
     '''
 
-    if 'proxyobject' in __opts__:
-        return __opts__['proxyobject'].ping()
+    if 'proxymodule' in __opts__:
+        return __opts__['proxymodule']['junos.ping']()
     else:
         return True
 
